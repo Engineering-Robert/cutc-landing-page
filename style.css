@@ -75,7 +75,8 @@ h2.title {
   font-size: 2em;
   margin-top: 20px;
 }
-.subtitle {
+.subtitle,
+.newsletter-information {
   width: 100%;
   color: #969696;
   font-size: 1em;
@@ -86,8 +87,6 @@ h2.title {
 }
 .logo {
   margin-bottom: 2.5em;
-  padding-top: 45px;
-  padding-bottom: 35px;
 }
 .text_center {
   text-align: center;
@@ -337,8 +336,6 @@ button:active {
 /************************************************************************************/
 
 #header_block {
-  background-image: url('media/images/mountains.jpg');
-  background-size: cover;
   position: fixed;
   width: 100%;
 }
@@ -369,8 +366,14 @@ button:active {
   margin: auto;
   margin-top: 10px;
 }
-#email_form {
+.newsletter-block {
   margin-top: 18vh;
+  position: absolute;
+  bottom: 80px;
+  width: 100%;
+}
+.newsletter-information {
+  margin-bottom: 20px;
 }
 #youtube_embed {
   width: 150%;
@@ -638,15 +641,11 @@ button:active {
   }
 }
 
-@media (max-height: 799px) {
-  .content_block {
-    height: auto;
-  }
+@media (max-height: 750px) {
   .filler_block {
     display: none;
   }
-
-  #header_block {
+  .newsletter-block {
     position: relative;
   }
 }

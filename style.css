@@ -26,8 +26,11 @@ hr {
   border-bottom: #c5c5c5 1px solid;
 }
 a {
-  color: #0275d8;
+  color: #b4160e;
   text-decoration: none;
+}
+a:hover {
+  color: #cf1a10
 }
 img {
   max-width: 100%;

@@ -18,6 +18,7 @@ footer {
   -o-transform: translateY(-100%);
   transform: translateY(-100%);
   text-align: right;
+  z-index: 2;
 }
 hr {
   width: 90%;
@@ -172,7 +173,7 @@ button:active {
   border-radius: 50%;
   overflow: hidden;
   font-size: 0;
-  /* The follwing line fixes a bug in webkit browsers where overflow:hidden will not hide children content */
+  /* The following line fixes a bug in webkit browsers where overflow:hidden will not hide children content */
   /* The image is a single pixel png */
   -webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC);
 }
@@ -299,7 +300,7 @@ button:active {
 .content_block {
   position: relative;
   overflow: hidden;
-  height: 100vh;
+  min-height: 100vh;
   padding-bottom: 80px;
   padding-top: 30px;
   background-color: black;
@@ -337,10 +338,8 @@ button:active {
 /************************************************************************************/
 /*HEADER BLOCK*/
 /************************************************************************************/
-
 #header_block {
-  position: fixed;
-  width: 100%;
+  z-index: 1;
 }
 #header_block .logo img {
   width: 55%;
@@ -372,7 +371,7 @@ button:active {
 .newsletter-block {
   margin-top: 18vh;
   position: absolute;
-  bottom: 80px;
+  bottom: 10vh;
   width: 100%;
 }
 .newsletter-information {
@@ -382,10 +381,9 @@ button:active {
   width: 150%;
   height: 150%;
   position: absolute;
-  left: -25%;
   top: -25%;
+  left: -25%;
   z-index: -1;
-  pointer-events: none;
 }
 
 
@@ -527,6 +525,31 @@ button:active {
 /************************************************************************************/
 /*MEDIA QUERIES*/
 /************************************************************************************/
+
+@media (max-aspect-ratio: 1280/1080) {
+  #header_block {
+    background-image: url('./media/images/mountains.jpg');
+    background-size: cover
+  }
+  #youtube_embed {
+    width: 300%;
+    height: 300%;
+    position: absolute;
+    top: -100%;
+    left: -100%;
+    z-index: -1;
+  }
+}
+
+@media (max-aspect-ratio: 780/1315) {
+  #header_block {
+    background-image: url('./media/images/mountains.jpg');
+    background-size: cover
+  }
+  #youtube_embed {
+    display: none;
+  }
+}
 
 @media (max-width: 999px) {
   #main_title {

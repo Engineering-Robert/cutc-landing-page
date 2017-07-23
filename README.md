@@ -1,2 +1,2 @@
 # cutc-landing-page
-Landing page created for CUTC as a placeholder on the cutc.ca website before next year's website is launched.
+Landing page created for the CUTC website (www.cutc.ca) before the 2018 conference website is launched.

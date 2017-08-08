@@ -1,4 +1,3 @@
-
  // Load the IFrame Player API code asynchronously.
  var tag = document.createElement('script');
 
